@@ -1,8 +1,8 @@
 {
   "name": "rn-metronome",
-  "title": "Rn Metronome",
+  "title": "React Native Metronome",
   "version": "1.0.0",
-  "description": "TODO",
+  "description": "A simple high-precision metronome",
   "main": "index.js",
   "files": [
     "README.md",
@@ -18,14 +18,14 @@
     "baseUrl": "https://github.com/kotlyar-andrey/rn-metronome"
   },
   "keywords": [
-    "react-native"
+    "react-native",
+    "metronome"
   ],
   "author": {
     "name": "Andrey Kotlyar",
     "email": "kotlyar562@gmail.com"
   },
   "license": "MIT",
-  "licenseFilename": "LICENSE",
   "readmeFilename": "README.md",
   "peerDependencies": {
     "react": ">=16.8.1",
