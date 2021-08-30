@@ -6,6 +6,7 @@ import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
+import com.facebook.react.bridge.Callback;
 import android.media.AudioAttributes;
 import android.media.AudioFormat;
 import android.media.AudioManager;
@@ -116,8 +117,8 @@ public class RNMetronomeModule extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public boolean isPlaying() {
-        return !mStop;
+    public void isPlaying(Callback callBack) {
+        callBack.invoke(!mStop);
     }
 
     @NonNull

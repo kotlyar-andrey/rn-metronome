@@ -19,7 +19,9 @@ RNMetronome.play(80); //play with 80 bpm
 
 RNMetronome.stop(); // stop playing
 
-RNMetronome.isPlaying(); // return true or false
+RNMetronome.isPlaying((playing) => {
+  console.log(playing); // true if metronome is playing
+});
 ```
 
 See _example_ folder for more details.
