@@ -22,6 +22,10 @@ RNMetronome.stop(); // stop playing
 RNMetronome.isPlaying((playing) => {
   console.log(playing); // true if metronome is playing
 });
+
+RNMetronome.getCurrentBpm((currentBpm) => {
+  console.log(currentBpm); // current bpm
+});
 ```
 
 See _example_ folder for more details.

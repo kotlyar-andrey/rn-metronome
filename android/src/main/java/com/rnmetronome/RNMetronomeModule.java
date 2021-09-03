@@ -121,6 +121,11 @@ public class RNMetronomeModule extends ReactContextBaseJavaModule {
         callBack.invoke(!mStop);
     }
 
+    @ReactMethod
+    public void getCurrentBpm(Callback callBack) {
+        callBack.invoke(mBpm);        
+    }
+
     @NonNull
     @Override
     public String getName() {
