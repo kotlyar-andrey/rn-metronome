@@ -1,18 +1,22 @@
 import * as React from 'react';
 
-import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from 'rn-metronome';
+import { StyleSheet, View, Text, Button } from 'react-native';
+import { Metronome } from 'rn-metronome';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
-
-  React.useEffect(() => {
-    multiply(3, 7).then(setResult);
-  }, []);
+  const [bpm, setBpm] = React.useState<number>(200);
 
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <Button onPress={() => setBpm(bpm + 1)} title="+" />
+      <Text>---------------------</Text>
+      <Button onPress={() => setBpm(bpm - 1)} title="-" />
+      <Text>---------------------</Text>
+      <Text>bpm: {bpm}</Text>
+      <Text>---------------------</Text>
+      <Button onPress={() => Metronome.play(bpm)} title="Play" />
+      <Text>---------------------</Text>
+      <Button onPress={() => Metronome.stop()} title="Stop" />
     </View>
   );
 }
