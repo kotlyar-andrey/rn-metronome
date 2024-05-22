@@ -17,10 +17,6 @@ const RnMetronome = NativeModules.RnMetronome
       }
     );
 
-// export function multiply(a: number, b: number): Promise<number> {
-//   return RnMetronome.multiply(a, b);
-// }
-
 export const Metronome = {
   play: RnMetronome.play,
   stop: RnMetronome.stop,

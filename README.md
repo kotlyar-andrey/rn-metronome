@@ -1,7 +1,5 @@
 # rn-metronome
 
-Simple hight-precision
-
 ## Installation
 
 ```sh
@@ -10,17 +8,21 @@ npm install rn-metronome
 
 ## Usage
 
+### Metronome:
+
 ```js
-import { multiply } from 'rn-metronome';
+import { Metronome } from 'rn-metronome';
+
+onPress = () => {
+  Metronome.play(100); // play with bpm=100
+};
 
 // ...
 
-const result = await multiply(3, 7);
+onPress = () => {
+  Metronome.stop(); // stop playing
+};
 ```
-
-## Contributing
-
-See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the repository and the development workflow.
 
 ## License
 
